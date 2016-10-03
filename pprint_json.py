@@ -1,6 +1,5 @@
-import json
-from pprint import pprint
 import os
+import json
 
 
 def load_data(filepath):
@@ -10,8 +9,8 @@ def load_data(filepath):
         return json.load(json_content)
 
 
-def pretty_print_json(filepath):
-    return pprint(data)
+def pretty_print_json(data):
+    print (json.dumps(data, indent=4, sort_keys=True, ensure_ascii=False))
 
 
 if __name__ == '__main__':
